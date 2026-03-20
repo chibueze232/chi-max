@@ -884,6 +884,61 @@
       .card-body { padding: 10px; }
     }
 
+    /* ─── HERO CATEGORY STRIP ─── */
+    .hero-cats { margin-top: 32px; }
+    .hero-cats-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .hero-cats-scroll {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: none;
+    }
+    .hero-cats-scroll::-webkit-scrollbar { display: none; }
+
+    .hcat {
+      flex-shrink: 0;
+      width: 80px;
+      cursor: pointer;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid transparent;
+      transition: border-color .25s, transform .25s;
+    }
+    .hcat:hover { border-color: var(--red); transform: translateY(-4px); }
+
+    .hcat-img {
+      width: 80px;
+      height: 110px;
+      background: #222;
+    }
+    .hcat-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hcat-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.92) 0%, transparent 100%);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 14px 4px 6px;
+    }
+
     /* ─── SCROLLBAR ─── */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -944,10 +999,59 @@
           <a href="#featured"><button class="btn-secondary">FEATURED PICKS</button></a>
         </div>
         <div class="hero-stats">
-          <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Movies</div></div>
+          <div class="stat"><div class="stat-num">9</div><div class="stat-label">Movies</div></div>
           <div class="stat"><div class="stat-num">HD</div><div class="stat-label">Quality</div></div>
           <div class="stat"><div class="stat-num">FREE</div><div class="stat-label">Download</div></div>
         </div>
+
+        <!-- Movie Poster Category Strip -->
+        <div class="hero-cats">
+          <div class="hero-cats-label">Browse by Genre</div>
+          <div class="hero-cats-scroll">
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./nezha2.jpeg" alt="Animation" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Animation</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./shleter.jpg" alt="Action" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Action</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./fire.jpg" alt="Horror" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Horror</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./accused.jpg" alt="Thriller" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Thriller</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./val.jpg" alt="Romance" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Romance</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./twisted.jpg" alt="Crime" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Crime</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./dead.jpg" alt="Sci-Fi" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Sci-Fi</div>
+            </a>
+
+            <a href="#movies" class="hcat">
+              <div class="hcat-img"><img src="./deadful.jpg" alt="Drama" onerror="this.src='https://via.placeholder.com/80x110/1a1a1a/555?text=+'"/></div>
+              <div class="hcat-overlay">Drama</div>
+            </a>
+
+          </div>
+        </div>
+
       </div>
 
       <!-- Login Card -->
